@@ -15,27 +15,55 @@
 
 \usepackage{afterpage}
 \usepackage{graphicx} 
-%\university{\href{http://www.uni.edu.pe/}{Universidad Nacional de Ingenier\'ia}} 
+\usepackage[autostyle=true]{csquotes}
+\usepackage{lmodern}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{multirow, array}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\input{spanishAlgorithmic} % mi archivo de traducción
+\usepackage{titling}
+\usepackage{tikz}
+
+
+%%%%%%%%%%%%%%%%%%
+%%%% Datos de la universidad, tesista y asesor
+
+\author{Briggette Olenka Román Huaytalla}
+\def\supervisor{Mg. Gipsy Miguel Arrunategui Angulo}
+\def\university{\href{http://www.uni.edu.pe/}{Universidad Nacional de Ingenier\'ia}}
 
 %%%%%%%%%%%%%%%%%%%
-%%%%Inicio de 
+%%%%Inicio de archivo
 \begin{document}
+
 	\begin{titlepage}
 		\centering
-		{\scshape \huge Universidad Nacional de Ingeniería \par}
+		{\scshape \huge \university \par}
 		\vspace{0.2cm}
 		{\scshape \Large Facultad de Ciencias \par}
 		\vspace{0.2cm}
 		{\scshape \large Escuela Profesional de Ciencia de la computación \par}
-		\vspace{1cm}
+%		\vspace{0.5cm}
+
 		\begin{figure}[h]
 			\centering
 			\includegraphics[scale = 0.4]{figure/log_uni}
 		\end{figure}
+%		\vspace{0.5cm}
 		
-		\vspace{1cm}
+		{\LARGE {Esquema de Monitorización en Seguridad para entorno IoT }}\\[1cm]
+		{\Large \textbf{SEMINARIO DE TESIS II}}\\[0.5cm]
+		\large\emph{Autor: \\}
+		{\theauthor}\\
+		\large\emph{Asesor:\\ }
+		{\supervisor }\\ 
+		{\large Diciembre, 2018}\\[4cm] 
 		
-		\textsc{\LARGE \textit{Esquema de Monitorización para entornos IoT }}\\[2cm] 
 		
 	\end{titlepage}
 	
