@@ -14,7 +14,9 @@ tesis/*.out
 tesis/*.run.xml
 tesis/*.synctex.gz
 tesis/*.toc
-
+tesis/*.lol
+tesis/*.toc
+tesis/*.lot
 
 #Directory
 ######################
