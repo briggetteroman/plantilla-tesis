@@ -1,70 +1,123 @@
-\documentclass[12pt,spanish,openright]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Autor: Briggette Román
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt,a4paper]{book}
 %%%%%%%%%%%%%%%%%
 %Manejo de paquetes
 %%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc} 
-\usepackage[T1]{fontenc}
 \usepackage[spanish]{babel} 
-\usepackage[none]{hyphenat}
-\usepackage{palatino} 
-\usepackage{acronym}
-\usepackage[acronym,nomain]{glossaries}
-%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex}
-%\addbibresource{main.bib}
-\usepackage[autostyle=true]{csquotes}
-
-\usepackage{afterpage}
-\usepackage{graphicx} 
-\usepackage[autostyle=true]{csquotes}
-\usepackage{lmodern}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{multirow, array}
 \usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{amsmath}
 \usepackage{algorithm}
 \usepackage{algorithmic}
 \input{spanishAlgorithmic} % mi archivo de traducción
-\usepackage{titling}
+\usepackage{titling} %Para llamar los datos
+\usepackage{titlesec} 
+\usepackage{lipsum} %Muestras Lorem Ipsum
 \usepackage{tikz}
-
+\usepackage{afterpage}
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{0}%
+	\newpage}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand\lstlistlistingname{Índice de Código}
 
 %%%%%%%%%%%%%%%%%%
 %%%% Datos de la universidad, tesista y asesor
-
+\title{{Esquema de Monitorización en Seguridad para entorno IoT }}
 \author{Briggette Olenka Román Huaytalla}
 \def\supervisor{Mg. Gipsy Miguel Arrunategui Angulo}
-\def\university{\href{http://www.uni.edu.pe/}{Universidad Nacional de Ingenier\'ia}}
+\def\university{\href{http://www.uni.edu.pe/}{Universidad Nacional de Ingeniería}}
+\def\faculty{Facultad de Ciencias}
+\def\school{Escuela Profesional de Ciencia de la Computación}
 
+%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
 %%%%Inicio de archivo
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%
+%%% Caratula
+
 	\begin{titlepage}
-		\centering
+		\begin{center}
+		
 		{\scshape \huge \university \par}
 		\vspace{0.2cm}
-		{\scshape \Large Facultad de Ciencias \par}
+		{\scshape \Large \faculty \par}
 		\vspace{0.2cm}
-		{\scshape \large Escuela Profesional de Ciencia de la computación \par}
-%		\vspace{0.5cm}
+		{\scshape \large \school \par}
+%		\vspace{0.2cm}
 
 		\begin{figure}[h]
 			\centering
-			\includegraphics[scale = 0.4]{figure/log_uni}
+			\includegraphics[scale = 0.5]{figure/log_uni}
 		\end{figure}
-%		\vspace{0.5cm}
+%		\vspace{0.2cm}
 		
-		{\LARGE {Esquema de Monitorización en Seguridad para entorno IoT }}\\[1cm]
+		{\LARGE \thetitle}\\[1cm]
 		{\Large \textbf{SEMINARIO DE TESIS II}}\\[0.5cm]
-		\large\emph{Autor: \\}
-		{\theauthor}\\
-		\large\emph{Asesor:\\ }
-		{\supervisor }\\ 
+		\large\emph{Autor: \\[0.3cm]}
+		{\theauthor}\\[0.5cm]
+		\large\emph{Asesor:\\[0.3cm] }
+		{\supervisor }\\[1cm]
 		{\large Diciembre, 2018}\\[4cm] 
-		
-		
+		\end{center}
+			
 	\end{titlepage}
+%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%
+%%% Resumen
+\titleformat{\chapter}[display]
+{\Large\itshape}
+{\filright\MakeUppercase{\chaptertitlename} }
+{10ex}
+{\titlerule\vspace{1ex}\filleft}
+[\vspace{1ex}\titlerule]
+\chapter*{Resumen}
+	
+		\lipsum[1-2] 
+	
+	\vspace{10px}	
+	\textbf{PALABRAS CLAVE:} IoT, Ciberseguridad, OWASP, vulnerabilidades, Gestión de Riesgos.
+	
+	\textit{El hardware es fácil de proteger: bloquearlo en una habitación, asegurarlo en un escritorio, o comprar uno de repuesto. La información posee más de un problema. Puede existir en más de un lugar, ser transportada a medio planeta en segundos, y ser robada sin que uno tenga conocimiento.}
+	
+	\begin{flushright}
+		(Bruce Schneider, Protege tu Macintosh, 1994)
+	\end{flushright}
+
+\afterpage{\blankpage}
+\tableofcontents
+\afterpage{\blankpage}
+\listoffigures
+\afterpage{\blankpage}
+\listoftables
+\afterpage{\blankpage}
+\lstlistoflistings
+\afterpage{\blankpage}
+\newpage
+
+	
+\titleformat{\chapter}[display]
+{\bfseries\Large}
+{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{1ex}
+{\titlerule\vspace{1ex}\filleft}
+[\vspace{1ex}\titlerule]	
+
+
+\mainmatter
+\chapter{Introducción}
+\lipsum
+\lipsum	
 	
 \end{document}
