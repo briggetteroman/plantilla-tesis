@@ -26,6 +26,7 @@
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Código}
 \renewcommand\lstlistlistingname{Índice de Código}
+\usepackage{acronym}
 
 %%%%%%%%%%%%%%%%%%
 %%%% Datos de la universidad, tesista y asesor
@@ -119,6 +120,13 @@
 \afterpage{\blankpage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Lista de acronimos
+\newpage
+\chapter*{Lista de Acrónimos}
+\input{acronimos}
+\afterpage{\blankpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Formato de capitulos
@@ -131,11 +139,15 @@
 [\vspace{1ex}\titlerule]	
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
-\chapter{Introducción}
-\lipsum
-\section{title}
-\subsection{title}
-\lipsum	
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Capitulos
+\input{chapters/introduccion}
+\input{chapters/estado-arte}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 \end{document}
