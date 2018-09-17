@@ -1,8 +1,7 @@
 # plantilla-tesis
 Plantilla para Seminario de Tesis
-~~~
 
-Esta plantilla esta hecho en $\Latex$, tomando la estructura básica para realizar una Tesis o cursos relacionados. 
+Esta plantilla esta hecho en $\Latex$, tomando la estructura básica para realizar una Tesis o un informe de investigación.
 Esta compuesto como se muestra en la siguiente estructura:
 * Caratula
 * Resumen
@@ -18,4 +17,6 @@ Esta compuesto como se muestra en la siguiente estructura:
 	* Estado del arte
 	* Capitulos referentes a la investigación.
 	* Conclusiones
-* 
+* Bibliografía
+* Anexos o Apendices
+
