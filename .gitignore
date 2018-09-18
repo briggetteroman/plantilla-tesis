@@ -17,7 +17,7 @@ tesis/*.toc
 tesis/*.lol
 tesis/*.toc
 tesis/*.lot
-
+tesis/chapters/*.log
 #Directory
 ######################
 */.ipynb_checkpoints/*
