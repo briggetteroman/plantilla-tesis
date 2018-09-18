@@ -1,0 +1,19 @@
+\chapter{Implementación}
+
+\begin{lstlisting}[language=bash, caption= Configuración de red del RPi]
+# Listamos las redes para encontrar a la que deseamos conectarnos
+$ sudo iwlist wlan0 scan
+
+#Agregamos los datos de la red a conectarse
+$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+
+# Agregar lo siguiente dentro del archivo wpa_supplicant.conf
+network={
+ssid="wifiName"
+psk="wifiPassword"
+}
+
+$ sudo reboot	
+\end{lstlisting}

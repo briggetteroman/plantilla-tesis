@@ -23,16 +23,37 @@
 	\thispagestyle{empty}%
 	\addtocounter{page}{0}%
 	\newpage}
+
+\usepackage{acronym} % Manejo de acronimos
+
+\usepackage{multicol} % Uso de split de columnas para las tablas
+\usepackage{multirow} % Uso de split de filas para las tablas
+\usepackage{colortbl} % Coloracion de celdas
+\usepackage{graphicx}
+\usepackage{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Seccion de escritura de codigo
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Código}
 \renewcommand\lstlistlistingname{Índice de Código}
-\usepackage{acronym} % Manejo de acronimos
+\lstdefinestyle{custombash}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	frame=L,
+	xleftmargin=\parindent,
+	language=bash,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\itshape\color{purple!40!black},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	captionpos=b
+}
+\lstset{escapechar=@,style=custombash}
 
-\usepackage{multicol}
-\usepackage{multirow} % Uso de split de celdas para las tablas
-\usepackage{colortbl}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
 %%%% Datos de la universidad, tesista y asesor
 \title{{Esquema de Monitorización en Seguridad para entorno IoT }}
@@ -166,6 +187,8 @@
 \input{chapters/introduccion}
 \afterpage{\blankpage}
 \input{chapters/estado-arte}
+\afterpage{\blankpage}
+\input{chapters/implementacion}
 \afterpage{\blankpage}
 \input{chapters/resultados}
 \afterpage{\blankpage}
