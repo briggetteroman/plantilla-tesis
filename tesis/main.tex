@@ -15,7 +15,7 @@
 \input{spanishAlgorithmic} % mi archivo de traducción
 \usepackage{titling} %Para llamar los datos
 \usepackage{titlesec} 
-\usepackage{lipsum} %Muestras Lorem Ipsum
+\usepackage{lipsum} %Muestras de Lorem Ipsum
 \usepackage{tikz}
 \usepackage{afterpage}
 \newcommand\blankpage{%
@@ -26,8 +26,12 @@
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Código}
 \renewcommand\lstlistlistingname{Índice de Código}
-\usepackage{acronym}
-%\acsetup{list-style=tabular}
+\usepackage{acronym} % Manejo de acronimos
+
+\usepackage{multicol}
+\usepackage{multirow} % Uso de split de celdas para las tablas
+\usepackage{colortbl}
+
 
 %%%%%%%%%%%%%%%%%%
 %%%% Datos de la universidad, tesista y asesor
@@ -85,7 +89,7 @@
 \titleformat{\chapter}[display]
 {\Large\itshape}
 {\filright\MakeUppercase{\chaptertitlename} }
-{10ex}
+{1ex}
 {\titlerule\vspace{1ex}\filleft}
 [\vspace{1ex}\titlerule]
 
@@ -160,8 +164,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Capitulos
 \input{chapters/introduccion}
+\afterpage{\blankpage}
 \input{chapters/estado-arte}
+\afterpage{\blankpage}
+\input{chapters/resultados}
+\afterpage{\blankpage}
+\input{chapters/conclusiones}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Bibliografia
+\bibliography{reference}
+\bibliographystyle{unsrt}
+\afterpage{\blankpage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 \end{document}

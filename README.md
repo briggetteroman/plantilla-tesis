@@ -1,4 +1,4 @@
-# plantilla-tesis
+# Plantilla para Tesis
 Plantilla para Seminario de Tesis
 
 Esta plantilla esta hecho en $\Latex$, tomando la estructura básica para realizar una Tesis o un informe de investigación.
