@@ -8,7 +8,9 @@
 %Manejo de paquetes
 %%%%%%%%%%%%%%%%%
 \usepackage[utf8]{inputenc} 
-\usepackage[spanish]{babel} 
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern}
 \usepackage{hyperref}
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -17,21 +19,19 @@
 \usepackage{titlesec} 
 \usepackage{lipsum} %Muestras de Lorem Ipsum
 \usepackage{tikz}
+\usepackage{acronym} % Manejo de acronimos
+\usepackage{multicol} % Uso de split de columnas para las tablas
+\usepackage{multirow} % Uso de split de filas para las tablas
+\usepackage{colortbl} % Coloracion de celdas
+\usepackage{graphicx}
+\usepackage{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{afterpage}
 \newcommand\blankpage{%
 	\null
 	\thispagestyle{empty}%
 	\addtocounter{page}{0}%
 	\newpage}
-
-\usepackage{acronym} % Manejo de acronimos
-
-\usepackage{multicol} % Uso de split de columnas para las tablas
-\usepackage{multirow} % Uso de split de filas para las tablas
-\usepackage{colortbl} % Coloracion de celdas
-\usepackage{graphicx}
-\usepackage{caption}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Seccion de escritura de codigo
 \usepackage{listings}
@@ -52,6 +52,14 @@
 	captionpos=b
 }
 \lstset{escapechar=@,style=custombash}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Estilizados de cabeceras y pie de pagina
+\usepackage{fancyhdr}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%
@@ -68,6 +76,15 @@
 %%%%Inicio de archivo
 \begin{document}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+{
+	\fancyhead[LE,RO]{\rmfamily\thepage}%
+%	\fancyhead[RE,LO]{\slshape\MakeMarkcase{\chaptermark}}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
 %%% Caratula
 
@@ -119,7 +136,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 %%% Resumen
 
-\chapter{Resumen}
+\chapter[Resumen]{Resumen}
 	
 		\lipsum[1] 
 	
@@ -185,14 +202,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Capitulos
 \input{chapters/introduccion}
-\afterpage{\blankpage}
+\newpage
+%\afterpage{\blankpage}
 \input{chapters/estado-arte}
 \afterpage{\blankpage}
 \input{chapters/implementacion}
 \afterpage{\blankpage}
 \input{chapters/resultados}
-\afterpage{\blankpage}
+%\afterpage{\blankpage}
 \input{chapters/conclusiones}
+\afterpage{\blankpage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
